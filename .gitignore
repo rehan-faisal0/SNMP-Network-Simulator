@@ -28,7 +28,6 @@ packages/
 *.nuget.targets
 
 # Build results
-[Dd]ebug/
 [Dd]ebugPublic/
 [Rr]elease/
 [Rr]eleases/
