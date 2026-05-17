@@ -32,13 +32,27 @@ A Windows Forms desktop application built in C# that simulates an SNMP (Simple N
 
 ## Screenshots
 
-> Add screenshots here after running the application.
+**Main Window**
 
-| Main Window | Device Added | SNMP Poll |
-|---|---|---|
-| `screenshots/main.png` | `screenshots/device_added.png` | `screenshots/snmp_poll.png` |
+![Main Window](screenshots/main.png)
 
-To add screenshots: create a `screenshots/` folder in the repo root and drop your images there, then update the paths above.
+When the application launches, only the SNMP Manager is visible on the canvas. The log panel on the left is empty and ready to record activity. The dropdown at the bottom lets you select a device type to add to the network.
+
+---
+
+**Device Added**
+
+![Device Added](screenshots/device_added.png)
+
+After adding multiple devices, each one appears on the canvas connected to the SNMP Manager via a line. The topology updates in real time as devices are added or dragged to new positions. Devices shown here include a Router, Computer, Thermometer, and CCTV camera, all linked to the central SNMP Manager.
+
+---
+
+**SNMP Poll**
+
+![SNMP Poll](screenshots/snmp_poll.png)
+
+Clicking the SNMP Manager triggers a poll of all connected devices. The log panel displays each device's name, assigned IP address, and current status (On/Off). The poll runs with a 1-second delay between each device response to simulate real network behaviour.
 
 ---
 
@@ -54,7 +68,7 @@ To add screenshots: create a `screenshots/` folder in the repo root and drop you
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-username/snmp-network-simulator.git
+   git clone https://github.com/rehan-faisal0/SNMP-Network-Simulator.git
    cd snmp-network-simulator
    ```
 
@@ -91,6 +105,10 @@ OOP_Project/
 │   ├── thermometer.png
 │   ├── computer.png
 │   └── cctv_icon_135799.png
+├── screenshots/            # Application screenshots for README
+│   ├── main.png
+│   ├── device_added.png
+│   └── snmp_poll.png
 ├── NetworkDevices.cs       # All network device classes (NetworkDevice, Router, etc.)
 ├── MainForm.cs             # Main form logic and event handlers
 ├── MainForm.Designer.cs    # Auto-generated designer file
