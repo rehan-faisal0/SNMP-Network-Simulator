@@ -61,16 +61,8 @@ To add screenshots: create a `screenshots/` folder in the repo root and drop you
 2. **Open the solution**
    - Double-click `OOP_Project.sln` in Visual Studio
 
-3. **Add images to output folder**
-   - Place the following image files in the project root (they will be copied to `bin\Debug\` on build):
-     - `images.jpg` — SNMP Manager icon
-     - `wifi-router.png` — Router icon
-     - `thermometer.png` — Thermometer icon
-     - `computer.png` — Computer icon
-     - `cctv_icon_135799.png` — CCTV icon
-   - In Solution Explorer, select each image → Properties → set **Copy to Output Directory** to `Copy if newer`
-
-4. **Build and Run**
+3. **Build and Run**
+   - All device images are included in the `assets/` folder and will be copied to the output directory automatically on build
    ```
    Build → Rebuild Solution
    Press F5
@@ -93,16 +85,17 @@ To add screenshots: create a `screenshots/` folder in the repo root and drop you
 
 ```
 OOP_Project/
+├── assets/                 # Device images (copied to bin\Debug\assets\ on build)
+│   ├── images.jpg          # SNMP Manager icon
+│   ├── wifi-router.png
+│   ├── thermometer.png
+│   ├── computer.png
+│   └── cctv_icon_135799.png
 ├── NetworkDevices.cs       # All network device classes (NetworkDevice, Router, etc.)
 ├── MainForm.cs             # Main form logic and event handlers
 ├── MainForm.Designer.cs    # Auto-generated designer file
 ├── Program.cs              # Entry point
-├── App.config              # Runtime configuration (.NET 4.7.2)
-├── images.jpg              # SNMP Manager icon
-├── wifi-router.png
-├── thermometer.png
-├── computer.png
-└── cctv_icon_135799.png
+└── App.config              # Runtime configuration (.NET 4.7.2)
 ```
 
 ---
