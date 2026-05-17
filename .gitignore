@@ -83,3 +83,10 @@ TestResults/
 # macOS
 .DS_Store
 Thumbs.db
+
+
+bin/
+obj/
+
+# But track assets
+!assets/
